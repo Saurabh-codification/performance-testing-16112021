@@ -111,7 +111,7 @@
             </elementProp>
             <elementProp name="csvFilepath" elementType="Argument">
               <stringProp name="Argument.name">csvFilepath</stringProp>
-              <stringProp name="Argument.value">${__P(csvFilename, &quot;&quot;)}</stringProp>
+              <stringProp name="Argument.value">${__P(csvFilename, &quot;users.csv&quot;)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>

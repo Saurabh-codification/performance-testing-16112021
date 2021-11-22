@@ -64,10 +64,10 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">100</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
+        <stringProp name="ThreadGroup.num_threads">${__P(threadCount, 100)}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${__P(rampupPeriod, 100)}</stringProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
-        <stringProp name="ThreadGroup.duration">10</stringProp>
+        <stringProp name="ThreadGroup.duration">${__P(duration, 100)}</stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
       </ThreadGroup>
@@ -81,7 +81,7 @@
             </elementProp>
             <elementProp name="portNumber" elementType="Argument">
               <stringProp name="Argument.name">portNumber</stringProp>
-              <stringProp name="Argument.value">3000</stringProp>
+              <stringProp name="Argument.value">${__P(portNumber, &apos;3000&apos;)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="tagsPath" elementType="Argument">
@@ -109,19 +109,9 @@
               <stringProp name="Argument.value">/api/users</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
-            <elementProp name="prometheus.ip" elementType="Argument">
-              <stringProp name="Argument.name">prometheus.ip</stringProp>
-              <stringProp name="Argument.value">20.204.70.56</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
-            <elementProp name="prometheus.port" elementType="Argument">
-              <stringProp name="Argument.name">prometheus.port</stringProp>
-              <stringProp name="Argument.value">9090</stringProp>
-              <stringProp name="Argument.metadata">=</stringProp>
-            </elementProp>
             <elementProp name="csvFilepath" elementType="Argument">
               <stringProp name="Argument.name">csvFilepath</stringProp>
-              <stringProp name="Argument.value">${__P(csvFilename, &apos;localhost&apos;)}</stringProp>
+              <stringProp name="Argument.value">${__P(csvFilename, &quot;&quot;)}</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
